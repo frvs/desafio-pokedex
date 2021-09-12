@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router';
 import { usePokemons } from '../../services/api';
 import PokemonCard from '../components/PokemonCard';
@@ -48,10 +48,18 @@ const SearchButton = styled.button`
 `;
 
 const Home = (): JSX.Element => {
+  const [hasFinishedTimeout, setHasFinishedTimeout] = useState<boolean>(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setHasFinishedTimeout(true);
+    }, 2000);
+  }, [hasFinishedTimeout]);
+
   const { pokemons, isLoading, isError } = usePokemons();
   const history = useHistory();
 
-  if (isLoading) return <Spinner />;
+  if (isLoading || !hasFinishedTimeout) return <Spinner />;
   if (isError) history.push('/404');
   return (
     <>

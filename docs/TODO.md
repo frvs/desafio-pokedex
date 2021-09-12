@@ -10,11 +10,11 @@
 - [x] avaliar se views/services faz sentido (estrutura de pastas)
 - [x] avaliar se faz sentido alguma lib de estilos (tailwind ou boostrap/material?) -> styled components?
 - [ ] dockerizar aplicação `npm run docker-up`
-- [ ] criar componente de loading com tratativa pra erro de requisição
+- [x] criar componente de loading com tratativa pra erro de requisição
 - [ ] atualizar readme
 - [ ] implementar pagina details
 - [ ] colocar hook de testes no commit
 - [x] adicionar pagina de 404
-- [ ] customizar pagina de 404
+- [x] customizar pagina de 404
 - [ ] fazer paginação
 - [ ] ilustrar weaknessess?
