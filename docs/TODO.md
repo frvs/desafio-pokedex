@@ -3,7 +3,7 @@
 - [x] criar página inicial /
 - [x] criar roteamento junto ao app
 - [x] adicionar editorconfig, eslint e prettier
-- [ ] escolher entre react swr e axios para api
+- [x] escolher entre react swr e axios para api
 - [x] escrever adr sobre adr
 - [ ] criar componente 'pokemon card'
 - [ ] utilizar css-grid no responsivo
