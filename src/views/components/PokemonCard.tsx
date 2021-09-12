@@ -1,14 +1,22 @@
 import React from 'react';
 
-type PokemonCardProps = {
+interface PokemonCardProps {
+  img: string;
+  id: number;
   name: string;
-};
+  type: string[];
+}
 
-const PokemonCard: React.FC<PokemonCardProps> = ({ name }: PokemonCardProps) => {
+const PokemonCard: React.FC<PokemonCardProps> = ({ id, img, name, type }: PokemonCardProps) => {
   return (
     <>
       <div>
+        <img src={img} />
+        <p>{id}</p>
         <p>{name}</p>
+        {type.map((type, index) => (
+          <p key={index}>{type}</p>
+        ))}
       </div>
     </>
   );

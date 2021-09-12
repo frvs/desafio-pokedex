@@ -1,11 +1,12 @@
 import useSWR from 'swr';
-import { Pokemon } from '../types';
+import { cachedPokemons } from '../data';
+import { PokemonResponse } from '../types';
 
-type PokemonsResponse = {
-  pokemons: Pokemon[];
+export interface PokemonPayload {
+  pokemons: PokemonResponse;
   isLoading: boolean;
   isError: boolean;
-};
+}
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars
 const fetcher = async (input: RequestInfo, init: RequestInit, ...args: any[]) => {
@@ -13,16 +14,16 @@ const fetcher = async (input: RequestInfo, init: RequestInit, ...args: any[]) =>
   return res.json();
 };
 
-const usePokemons = (): PokemonsResponse => {
-  const { data, error } = useSWR(
+const usePokemons = (): PokemonPayload => {
+  const { data, error } = useSWR<PokemonResponse, boolean>(
     `https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json`,
-    fetcher,
+    fetcher
   );
 
   return {
-    pokemons: data,
+    pokemons: data || cachedPokemons,
     isLoading: !error && !data,
-    isError: error,
+    isError: error || false
   };
 };
 

@@ -14,4 +14,6 @@
 - [ ] atualizar readme
 - [ ] implementar pagina details
 - [ ] colocar hook de testes no commit
-- [ ] adicionar pagina de 404
+- [x] adicionar pagina de 404
+- [ ] customizar pagina de 404
+- [ ] fazer paginação

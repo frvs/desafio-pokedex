@@ -24,6 +24,10 @@ export interface Pokemon {
   spawn_time: string;
   multipliers: number[];
   weaknesses: string[];
-  next_evolution: NextEvolution[];
-  prev_evolution: PrevEvolution[];
+  next_evolution?: NextEvolution[];
+  prev_evolution?: PrevEvolution[];
+}
+
+export interface PokemonResponse {
+  pokemon: Pokemon[];
 }
