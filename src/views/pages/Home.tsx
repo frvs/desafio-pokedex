@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-const Home = () => (
-    <div>
-        <p>oi</p>
-    </div>
-)
+const Home = (): JSX.Element => (
+  <div>
+    <p>oi</p>
+  </div>
+);
 
 export default Home;

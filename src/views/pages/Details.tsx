@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-const Details = () => (
-    <div>
-        <p>oi</p>
-    </div>
-)
+const Details = (): JSX.Element => (
+  <div>
+    <p>oi</p>
+  </div>
+);
 
 export default Details;

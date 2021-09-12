@@ -1,13 +1,14 @@
-import { Switch, Route } from "react-router-dom";
-import Details from "./views/pages/Details";
-import Home from "./views/pages/Home";
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+import Details from './views/pages/Details';
+import Home from './views/pages/Home';
 
-const Routes = () => {
+const Routes = (): JSX.Element => {
   return (
     <div>
       <Switch>
         <Route path="/pokemon/:id">
-          <Details/>
+          <Details />
         </Route>
         <Route path="/">
           <Home />
@@ -15,6 +16,6 @@ const Routes = () => {
       </Switch>
     </div>
   );
-}
+};
 
 export default Routes;
