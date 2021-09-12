@@ -9,7 +9,7 @@
 - [x] utilizar css-grid no responsivo
 - [x] avaliar se views/services faz sentido (estrutura de pastas)
 - [x] avaliar se faz sentido alguma lib de estilos (tailwind ou boostrap/material?) -> styled components?
-- [ ] dockerizar aplicação `npm run docker-up`
+- [x] dockerizar aplicação `npm run docker-up`
 - [x] criar componente de loading com tratativa pra erro de requisição
 - [ ] atualizar readme
 - [ ] implementar pagina details
