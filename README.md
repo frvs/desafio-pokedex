@@ -12,6 +12,11 @@
   "docker-up": "docker-compose up -d --build"
 ```
 
+### Styleguide
+- Editorconfig
+- Eslint
+- Prettier
+
 ### Padronizações
 - Código em inglês
 - Commits em inglês

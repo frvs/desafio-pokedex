@@ -11,9 +11,9 @@
 - [x] avaliar se faz sentido alguma lib de estilos (tailwind ou boostrap/material?) -> styled components?
 - [x] dockerizar aplicação `npm run docker-up`
 - [x] criar componente de loading com tratativa pra erro de requisição
-- [ ] atualizar readme
-- [ ] implementar pagina details
+- [x] atualizar readme
 - [ ] colocar hook de testes no commit
 - [x] adicionar pagina de 404
 - [x] customizar pagina de 404
 - [ ] ilustrar weaknessess?
+- [ ] implementar pagina details
