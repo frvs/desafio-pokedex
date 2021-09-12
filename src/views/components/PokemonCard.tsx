@@ -1,23 +1,55 @@
 import React from 'react';
+import styled from 'styled-components';
 
 interface PokemonCardProps {
   img: string;
-  id: number;
+  num: string;
   name: string;
   type: string[];
 }
 
-const PokemonCard: React.FC<PokemonCardProps> = ({ id, img, name, type }: PokemonCardProps) => {
+const typeColorMap: Map<string, string> = new Map();
+typeColorMap.set('Grass', '');
+typeColorMap.set('Poison', '');
+typeColorMap.set('Fire', '');
+typeColorMap.set('Flying', '');
+typeColorMap.set('Water', '');
+typeColorMap.set('Bug', '');
+typeColorMap.set('Normal', '');
+typeColorMap.set('Electric', '');
+typeColorMap.set('Ground', '');
+typeColorMap.set('Fighting', '');
+typeColorMap.set('Psychic', '');
+typeColorMap.set('Rock', '');
+typeColorMap.set('Grass', '');
+typeColorMap.set('Ice', '');
+typeColorMap.set('Ghost', '');
+typeColorMap.set('Dragon', '');
+
+const PokemonCardContainer = styled.div`
+  margin: 20px;
+`;
+
+const TypeLabel = styled.label((props) => ({
+  background: props.color,
+  borderRadius: `10px`,
+  fontSize: `12px`,
+  marginRight: `5px`
+}));
+
+const PokemonCard: React.FC<PokemonCardProps> = ({ num, img, name, type }: PokemonCardProps) => {
   return (
     <>
-      <div>
+      <PokemonCardContainer>
         <img src={img} />
-        <p>{id}</p>
-        <p>{name}</p>
-        {type.map((type, index) => (
-          <p key={index}>{type}</p>
+        <p>#{num}</p>
+        <h2>{name}</h2>
+        {type.map((text, index) => (
+          <TypeLabel key={index} color={typeColorMap.get(text)}>
+            {text}
+          </TypeLabel>
         ))}
-      </div>
+      </PokemonCardContainer>
     </>
   );
 };

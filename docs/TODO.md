@@ -5,10 +5,10 @@
 - [x] adicionar editorconfig, eslint e prettier
 - [x] escolher entre react swr e axios para api
 - [x] escrever adr sobre adr
-- [ ] criar componente 'pokemon card'
-- [ ] utilizar css-grid no responsivo
+- [x] criar componente 'pokemon card'
+- [x] utilizar css-grid no responsivo
 - [x] avaliar se views/services faz sentido (estrutura de pastas)
-- [ ] avaliar se faz sentido alguma lib de estilos (tailwind ou boostrap/material?) -> styled components?
+- [x] avaliar se faz sentido alguma lib de estilos (tailwind ou boostrap/material?) -> styled components?
 - [ ] dockerizar aplicação `npm run docker-up`
 - [ ] criar componente de loading com tratativa pra erro de requisição
 - [ ] atualizar readme
@@ -17,3 +17,4 @@
 - [x] adicionar pagina de 404
 - [ ] customizar pagina de 404
 - [ ] fazer paginação
+- [ ] ilustrar weaknessess?
