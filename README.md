@@ -2,7 +2,7 @@
 ## Teste para Novatics
 
 ## Deploy feito em:
-[pokedex.vercel.com]()
+[desafio-pokedex.vercel.app](https://desafio-pokedex.vercel.app/)
 
 ### NPM scripts
 ```
