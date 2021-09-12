@@ -8,9 +8,10 @@
 - [ ] criar componente 'pokemon card'
 - [ ] utilizar css-grid no responsivo
 - [x] avaliar se views/services faz sentido (estrutura de pastas)
-- [ ] avaliar se faz sentido alguma lib de estilos (tailwind ou boostrap/material?)
+- [ ] avaliar se faz sentido alguma lib de estilos (tailwind ou boostrap/material?) -> styled components?
 - [ ] dockerizar aplicação `npm run docker-up`
 - [ ] criar componente de loading com tratativa pra erro de requisição
 - [ ] atualizar readme
 - [ ] implementar pagina details
 - [ ] colocar hook de testes no commit
+- [ ] adicionar pagina de 404
