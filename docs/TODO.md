@@ -16,5 +16,4 @@
 - [ ] colocar hook de testes no commit
 - [x] adicionar pagina de 404
 - [x] customizar pagina de 404
-- [ ] fazer paginação
 - [ ] ilustrar weaknessess?
