@@ -5,7 +5,7 @@ import PokemonCard from '../components/PokemonCard';
 import Spinner from '../components/Spinner';
 import styled from 'styled-components';
 
-const Main = styled.div`
+const MainContent = styled.div`
   width: 70%;
   margin: 0 auto;
 `;
@@ -27,6 +27,26 @@ const PokemonsWrapper = styled.div`
   }
 `;
 
+const Header = styled.header`
+  margin-left: 50px;
+  color: #888888;
+  font-size: 24px;
+  margin: 20px 0 20px 40px;
+`;
+
+const SearchBar = styled.section`
+  background-color: #313131;
+  color: white;
+  padding: 20px;
+`;
+
+const SearchButton = styled.button`
+  background-color: #ec6a2f;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+`;
+
 const Home = (): JSX.Element => {
   const { pokemons, isLoading, isError } = usePokemons();
   const history = useHistory();
@@ -34,15 +54,29 @@ const Home = (): JSX.Element => {
   if (isLoading) return <Spinner />;
   if (isError) history.push('/404');
   return (
-    <Main>
-      <PokemonsWrapper>
-        {pokemons.pokemon.map((pokemon) => (
-          <div key={pokemon.id}>
-            <PokemonCard num={pokemon.num} name={pokemon.name} img={pokemon.img} type={pokemon.type} />
-          </div>
-        ))}
-      </PokemonsWrapper>
-    </Main>
+    <>
+      <MainContent>
+        <Header>Pokédex</Header>
+      </MainContent>
+      <SearchBar>
+        <MainContent>
+          <h2>Name or number</h2>
+          <span>
+            <input type="text" placeholder="#002 ou Ivysaur"></input>
+            <SearchButton>🔎</SearchButton>
+          </span>
+        </MainContent>
+      </SearchBar>
+      <MainContent>
+        <PokemonsWrapper>
+          {pokemons.pokemon.map((pokemon) => (
+            <div key={pokemon.id}>
+              <PokemonCard num={pokemon.num} name={pokemon.name} img={pokemon.img} type={pokemon.type} />
+            </div>
+          ))}
+        </PokemonsWrapper>
+      </MainContent>
+    </>
   );
 };
 
