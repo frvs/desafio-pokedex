@@ -12,6 +12,7 @@
 - [x] dockerizar aplicação `npm run docker-up`
 - [x] criar componente de loading com tratativa pra erro de requisição
 - [x] atualizar readme
+- [ ] implementar plano de testes
 - [ ] colocar hook de testes no commit
 - [x] adicionar pagina de 404
 - [x] customizar pagina de 404

@@ -3,9 +3,11 @@ import Loader from 'react-loader-spinner';
 import styled from 'styled-components';
 
 const SpinnerContainer = styled.div`
-  position: fixed;
-  top: 50%;
-  left: 50%;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Spinner = (): JSX.Element => {

@@ -7,7 +7,7 @@ import styled from 'styled-components';
 import { Pokemon } from '../../types';
 
 const MainContent = styled.div`
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
 `;
 
@@ -15,7 +15,7 @@ const PokemonsWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
 
-  @media (min-width: 320px) {
+  @media (min-width: 375px) {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -29,10 +29,9 @@ const PokemonsWrapper = styled.div`
 `;
 
 const Header = styled.header`
-  margin-left: 50px;
   color: #888888;
   font-size: 24px;
-  margin: 20px 0 20px 40px;
+  margin: 5% 0 5% 10%;
 `;
 
 const SearchBar = styled.section`
@@ -57,10 +56,10 @@ const Home = (): JSX.Element => {
 
   const onChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     const input = event.target.value;
-    const fPokemons = pokemons.pokemon.filter((poke) => {
+    const filteredPokemons = pokemons.pokemon.filter((poke) => {
       return poke.name.toLowerCase().includes(input.toLowerCase()) || poke.num.includes(input.replace('#', ''));
     });
-    setFilteredPokemons(fPokemons);
+    setFilteredPokemons(filteredPokemons);
   };
 
   if (isLoading || !hasFinishedTimeout) return <Spinner />;
@@ -74,7 +73,7 @@ const Home = (): JSX.Element => {
         <MainContent>
           <h2>Name or number</h2>
           <span>
-            <input type="text" placeholder="#002 ou Ivysaur" onChange={onChangeHandler}></input>
+            <input type="text" placeholder="#002 or Ivysaur" onChange={onChangeHandler}></input>
           </span>
         </MainContent>
       </SearchBar>
